@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gourmet Delight - Restaurant en ligne</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Barre de navigation -->
+    <nav>
+      <div class="logo">
+        <img src="image/logo.png" alt="Gourmet Delight" />
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="#Home" class="active">Accueil</a></li>
+        <li><a href="#About">À propos</a></li>
+        <li><a href="#Menu">Menu</a></li>
+        <li><a href="#Gallary">Galerie</a></li>
+        <li><a href="#Review">Avis</a></li>
+        <li><a href="#Order">Commande</a></li>
+      </ul>
+
+      <div class="nav-icons">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <i class="fa-solid fa-heart wishlist-icon"></i>
+        <div class="cart-icon-container">
+          <i class="fa-solid fa-cart-shopping cart-icon"></i>
+          <span class="cart-count">0</span>
+        </div>
+        <div class="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="Home">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Délices <span>Gourmands</span><br />Livrés Chez Vous</h1>
+          <p>
+            Découvrez une expérience culinaire exceptionnelle avec nos plats
+            préparés par les meilleurs chefs. Fraîcheur, qualité et saveurs sont
+            au rendez-vous.
+          </p>
+          <div class="hero-buttons">
+            <a href="#Menu" class="btn-primary"
+              >Voir le menu <i class="fa-solid fa-arrow-right"></i
+            ></a>
+            <a href="#Order" class="btn-secondary">Commander maintenant</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="image/main_img.png" alt="Plat principal" />
+          <div class="floating-badge">
+            <i class="fa-solid fa-truck"></i>
+            <span>Livraison gratuite</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="About" class="about">
+      <div class="about-container">
+        <div class="about-image">
+          <img src="image/Food-Plate.png" alt="Notre spécialité" />
+          <div class="experience-badge">
+            <span class="years">10+</span>
+            <span>Années d'expérience</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <h2>Pourquoi <span>Nous Choisir ?</span></h2>
+          <h3>Les meilleurs ingrédients pour les meilleurs plats</h3>
+          <p>
+            Nous sélectionnons avec soin nos ingrédients frais et de qualité
+            pour vous offrir une expérience gustative unique. Notre équipe de
+            chefs passionnés prépare chaque plat avec amour et créativité, en
+            respectant les traditions culinaires tout en innovant constamment.
+          </p>
+
+          <div class="features-grid">
+            <div class="feature">
+              <i class="fa-solid fa-leaf"></i>
+              <span>Produits frais</span>
+            </div>
+            <div class="feature">
+              <i class="fa-solid fa-trophy"></i>
+              <span>Chefs étoilés</span>
+            </div>
+            <div class="feature">
+              <i class="fa-solid fa-clock"></i>
+              <span>Livraison rapide</span>
+            </div>
+            <div class="feature">
+              <i class="fa-solid fa-heart"></i>
+              <span>Recettes authentiques</span>
+            </div>
+          </div>
+
+          <a href="#Order" class="btn-primary">Commander maintenant</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Menu -->
+    <section id="Menu" class="menu">
+      <h2>Notre <span>Menu</span></h2>
+      <p class="section-subtitle">Découvrez nos délicieuses spécialités</p>
+
+      <!-- Filtres du menu -->
+      <div class="menu-filters">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="burger">Burgers</button>
+        <button class="filter-btn" data-filter="pasta">Pâtes</button>
+        <button class="filter-btn" data-filter="pizza">Pizzas</button>
+        <button class="filter-btn" data-filter="dessert">Desserts</button>
+        <button class="filter-btn" data-filter="boisson">Boissons</button>
+      </div>
+
+      <div class="menu-grid">
+        <!-- Burger -->
+        <div class="menu-card" data-category="burger">
+          <div class="menu-image">
+            <img src="image/buger.jpg" alt="Burger Classique" />
+            <button class="wishlist-btn">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="menu-info">
+            <h3>Burger Classique</h3>
+            <p>Steak haché, salade, tomate, oignon, sauce maison</p>
+            <div class="menu-footer">
+              <span class="price">$18.99</span>
+              <button
+                class="add-to-cart"
+                data-id="1"
+                data-name="Burger Classique"
+                data-price="18.99"
+                data-image="image/buger.jpg"
+              >
+                <i class="fa-solid fa-cart-plus"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pasta -->
+        <div class="menu-card" data-category="pasta">
+          <div class="menu-image">
+            <img src="image/pasta.jpg" alt="Pasta Carbonara" />
+            <button class="wishlist-btn">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="menu-info">
+            <h3>Pasta Carbonara</h3>
+            <p>Pâtes fraîches, crème, lardons, parmesan, oeuf</p>
+            <div class="menu-footer">
+              <span class="price">$22.50</span>
+              <button
+                class="add-to-cart"
+                data-id="2"
+                data-name="Pasta Carbonara"
+                data-price="22.50"
+                data-image="image/pasta.jpg"
+              >
+                <i class="fa-solid fa-cart-plus"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lasagna -->
+        <div class="menu-card" data-category="pasta">
+          <div class="menu-image">
+            <img src="image/lasagna.webp" alt="Lasagna" />
+            <button class="wishlist-btn">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="menu-info">
+            <h3>Lasagna</h3>
+            <p>Pâtes, sauce bolognaise, béchamel, fromage gratiné</p>
+            <div class="menu-footer">
+              <span class="price">$24.99</span>
+              <button
+                class="add-to-cart"
+                data-id="3"
+                data-name="Lasagna"
+                data-price="24.99"
+                data-image="image/lasagna.webp"
+              >
+                <i class="fa-solid fa-cart-plus"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pizza -->
+        <div class="menu-card" data-category="pizza">
+          <div class="menu-image">
+            <img src="image/pizza.jpg" alt="Pizza Margherita" />
+            <button class="wishlist-btn">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="menu-info">
+            <h3>Pizza Margherita</h3>
+            <p>Sauce tomate, mozzarella, basilic, huile d'olive</p>
+            <div class="menu-footer">
+              <span class="price">$19.99</span>
+              <button
+                class="add-to-cart"
+                data-id="4"
+                data-name="Pizza Margherita"
+                data-price="19.99"
+                data-image="image/pizza.jpg"
+              >
+                <i class="fa-solid fa-cart-plus"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hot Dog -->
+        <div class="menu-card" data-category="burger">
+          <div class="menu-image">
+            <img src="image/Hot_dog.jpg" alt="Hot Dog" />
+            <button class="wishlist-btn">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="menu-info">
+            <h3>Hot Dog Deluxe</h3>
+            <p>Saucisse grillée, oignons caramélisés, sauce spéciale</p>
+            <div class="menu-footer">
+              <span class="price">$15.99</span>
+              <button
+                class="add-to-cart"
+                data-id="5"
+                data-name="Hot Dog Deluxe"
+                data-price="15.99"
+                data-image="image/Hot_dog.jpg"
+              >
+                <i class="fa-solid fa-cart-plus"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Juse -->
+        <div class="menu-card" data-category="boisson">
+          <div class="menu-image">
+            <img src="image/juse.jpg" alt="Jus de fruits" />
+            <button class="wishlist-btn">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="menu-info">
+            <h3>Jus de fruits frais</h3>
+            Orange, citron, gingembre - vitamines garanties
+            <div class="menu-footer">
+              <span class="price">$8.99</span>
+              <button
+                class="add-to-cart"
+                data-id="6"
+                data-name="Jus de fruits frais"
+                data-price="8.99"
+                data-image="image/juse.jpg"
+              >
+                <i class="fa-solid fa-cart-plus"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Biryani -->
+        <div class="menu-card" data-category="pasta">
+          <div class="menu-image">
+            <img src="image/biryani.webp" alt="Biryani" />
+            <button class="wishlist-btn">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="menu-info">
+            <h3>Biryani Royal</h3>
+            <p>Riz parfumé aux épices, poulet mariné, raisins secs</p>
+            <div class="menu-footer">
+              <span class="price">$26.99</span>
+              <button
+                class="add-to-cart"
+                data-id="7"
+                data-name="Biryani Royal"
+                data-price="26.99"
+                data-image="image/biryani.webp"
+              >
+                <i class="fa-solid fa-cart-plus"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chocolate -->
+        <div class="menu-card" data-category="dessert">
+          <div class="menu-image">
+            <img src="image/chocolate.jpg" alt="Fondant au chocolat" />
+            <button class="wishlist-btn">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="menu-info">
+            <h3>Fondant au chocolat</h3>
+            <p>Chocolat noir, cœur coulant, glace vanille</p>
+            <div class="menu-footer">
+              <span class="price">$12.99</span>
+              <button
+                class="add-to-cart"
+                data-id="8"
+                data-name="Fondant au chocolat"
+                data-price="12.99"
+                data-image="image/chocolate.jpg"
+              >
+                <i class="fa-solid fa-cart-plus"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ice Cream -->
+        <div class="menu-card" data-category="dessert">
+          <div class="menu-image">
+            <img src="image/ice_cream.jpg" alt="Glace" />
+            <button class="wishlist-btn">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="menu-info">
+            <h3>Glace artisanale</h3>
+            <p>Parfum au choix : vanille, chocolat, fraise, pistache</p>
+            <div class="menu-footer">
+              <span class="price">$9.99</span>
+              <button
+                class="add-to-cart"
+                data-id="9"
+                data-name="Glace artisanale"
+                data-price="9.99"
+                data-image="image/ice_cream.jpg"
+              >
+                <i class="fa-solid fa-cart-plus"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spanchi -->
+        <div class="menu-card" data-category="dessert">
+          <div class="menu-image">
+            <img src="image/Spanchi.jpg" alt="Spanchi" />
+            <button class="wishlist-btn">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="menu-info">
+            <h3>Spanchi</h3>
+            <p>Beignet moelleux au miel et aux graines de sésame</p>
+            <div class="menu-footer">
+              <span class="price">$11.99</span>
+              <button
+                class="add-to-cart"
+                data-id="10"
+                data-name="Spanchi"
+                data-price="11.99"
+                data-image="image/Spanchi.jpg"
+              >
+                <i class="fa-solid fa-cart-plus"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sandwich -->
+        <div class="menu-card" data-category="burger">
+          <div class="menu-image">
+            <img src="image/sandwich.jpg" alt="Sandwich" />
+            <button class="wishlist-btn">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="menu-info">
+            <h3>Sandwich Club</h3>
+            <p>Pain de mie, poulet, bacon, laitue, tomate, mayonnaise</p>
+            <div class="menu-footer">
+              <span class="price">$16.99</span>
+              <button
+                class="add-to-cart"
+                data-id="11"
+                data-name="Sandwich Club"
+                data-price="16.99"
+                data-image="image/sandwich.jpg"
+              >
+                <i class="fa-solid fa-cart-plus"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drink -->
+        <div class="menu-card" data-category="boisson">
+          <div class="menu-image">
+            <img src="image/chocolate_Drink.jpg" alt="Boisson chocolatée" />
+            <button class="wishlist-btn">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="menu-info">
+            <h3>Chocolat chaud</h3>
+            <p>Chocolat belge, lait mousseux, chantilly</p>
+            <div class="menu-footer">
+              <span class="price">$7.99</span>
+              <button
+                class="add-to-cart"
+                data-id="12"
+                data-name="Chocolat chaud"
+                data-price="7.99"
+                data-image="image/chocolate_Drink.jpg"
+              >
+                <i class="fa-solid fa-cart-plus"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Galerie -->
+    <section id="Gallary" class="gallary">
+      <h2>Notre <span>Galerie</span></h2>
+      <p class="section-subtitle">Découvrez l'art de notre cuisine en images</p>
+
+      <div class="gallary-grid">
+        <div class="gallary-item">
+          <img src="image/gallary_1.jpg" alt="Plat 1" />
+          <div class="gallary-overlay">
+            <h3>Plat du jour</h3>
+            <p>Spécialité du chef avec des légumes de saison</p>
+            <button class="view-dish" data-dish="Plat du jour">
+              Voir le plat
+            </button>
+          </div>
+        </div>
+        <div class="gallary-item">
+          <img src="image/gallary_2.jpg" alt="Plat 2" />
+          <div class="gallary-overlay">
+            <h3>Déjeuner santé</h3>
+            <p>Équilibre parfait entre saveurs et nutrition</p>
+            <button class="view-dish" data-dish="Déjeuner santé">
+              Voir le plat
+            </button>
+          </div>
+        </div>
+        <div class="gallary-item">
+          <img src="image/gallary_3.jpg" alt="Plat 3" />
+          <div class="gallary-overlay">
+            <h3>Petit-déjeuner</h3>
+            <p>Commencez votre journée avec énergie</p>
+            <button class="view-dish" data-dish="Petit-déjeuner">
+              Voir le plat
+            </button>
+          </div>
+        </div>
+        <div class="gallary-item">
+          <img src="image/gallary_4.jpg" alt="Plat 4" />
+          <div class="gallary-overlay">
+            <h3>Café gourmet</h3>
+            <p>Accompagnement parfait pour vos desserts</p>
+            <button class="view-dish" data-dish="Café gourmet">
+              Voir le plat
+            </button>
+          </div>
+        </div>
+        <div class="gallary-item">
+          <img src="image/gallary_5.jpg" alt="Plat 5" />
+          <div class="gallary-overlay">
+            <h3>Pâtisserie fine</h3>
+            <p>Créations sucrées de nos chefs pâtissiers</p>
+            <button class="view-dish" data-dish="Pâtisserie fine">
+              Voir le plat
+            </button>
+          </div>
+        </div>
+        <div class="gallary-item">
+          <img src="image/gallary_6.jpg" alt="Plat 6" />
+          <div class="gallary-overlay">
+            <h3>Cocktail maison</h3>
+            <p>Boissons rafraîchissantes et originales</p>
+            <button class="view-dish" data-dish="Cocktail maison">
+              Voir le plat
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Avis -->
+    <section id="Review" class="review">
+      <h2>Avis de nos <span>Clients</span></h2>
+      <p class="section-subtitle">Ce qu'ils pensent de nous</p>
+
+      <div class="review-slider">
+        <div class="review-container">
+          <div class="review-card">
+            <div class="reviewer-info">
+              <img src="image/review_1.png" alt="Client 1" />
+              <div>
+                <h3>Marie Dubois</h3>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p>
+              "Service exceptionnel ! Les plats sont délicieux et la livraison
+              est toujours rapide. Je recommande vivement le burger classique,
+              un régal !"
+            </p>
+            <div class="review-date">Il y a 2 jours</div>
+          </div>
+
+          <div class="review-card">
+            <div class="reviewer-info">
+              <img src="image/review_2.png" alt="Client 2" />
+              <div>
+                <h3>Thomas Martin</h3>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+              </div>
+            </div>
+            <p>
+              "La pizza Margherita est excellente, on sent la qualité des
+              ingrédients. Le site est facile à utiliser et le paiement
+              sécurisé. Bravo !"
+            </p>
+            <div class="review-date">Il y a 1 semaine</div>
+          </div>
+
+          <div class="review-card">
+            <div class="reviewer-info">
+              <img src="image/review_3.png" alt="Client 3" />
+              <div>
+                <h3>Sophie Bernard</h3>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p>
+              "Très bonne expérience, les pâtes étaient parfaitement cuites. Le
+              service client est réactif. Je reviendrai certainement !"
+            </p>
+            <div class="review-date">Il y a 2 semaines</div>
+          </div>
+
+          <div class="review-card">
+            <div class="reviewer-info">
+              <img src="image/review_4.png" alt="Client 4" />
+              <div>
+                <h3>Philippe Petit</h3>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p>
+              "Les desserts sont incroyables ! Le fondant au chocolat est une
+              tuerie. Livraison soignée et respect des horaires. Parfait !"
+            </p>
+            <div class="review-date">Il y a 3 semaines</div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-prev">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="slider-next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Commande -->
+    <section id="Order" class="order">
+      <h2>Passez votre <span>Commande</span></h2>
+      <p class="section-subtitle">
+        Remplissez le formulaire et recevez vos plats
+      </p>
+
+      <div class="order-container">
+        <div class="order-image">
+          <img src="image/order_image.png" alt="Commande en ligne" />
+        </div>
+
+        <form id="orderForm" class="order-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" placeholder="Votre nom" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="votre@email.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="+33 6 12 34 56 78"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="quantity">Quantité</label>
+              <input type="number" id="quantity" min="1" value="1" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="dish">Plat commandé</label>
+            <select id="dish" required>
+              <option value="">Sélectionnez un plat</option>
+              <option value="Burger Classique">Burger Classique</option>
+              <option value="Pasta Carbonara">Pasta Carbonara</option>
+              <option value="Lasagna">Lasagna</option>
+              <option value="Pizza Margherita">Pizza Margherita</option>
+              <option value="Hot Dog Deluxe">Hot Dog Deluxe</option>
+              <option value="Jus de fruits frais">Jus de fruits frais</option>
+              <option value="Biryani Royal">Biryani Royal</option>
+              <option value="Fondant au chocolat">Fondant au chocolat</option>
+              <option value="Glace artisanale">Glace artisanale</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Adresse de livraison</label>
+            <textarea
+              id="address"
+              rows="3"
+              placeholder="Numéro, rue, code postal, ville"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Mode de paiement</label>
+            <div class="payment-methods">
+              <label class="payment-option">
+                <input type="radio" name="payment" value="card" checked />
+                <i class="fa-solid fa-credit-card"></i>
+                <span>Carte bancaire</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="mobile" />
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <span>Mobile Money</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="paypal" />
+                <i class="fa-brands fa-paypal"></i>
+                <span>PayPal</span>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary order-submit">
+            Confirmer la commande
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Section Équipe -->
+    <section class="team">
+      <h2>Notre <span>Équipe</span></h2>
+      <p class="section-subtitle">Des passionnés à votre service</p>
+
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="member-image">
+            <img src="image/chef1.png" alt="Chef 1" />
+          </div>
+          <div class="member-info">
+            <h3>Chef Pierre</h3>
+            <p>Chef exécutif</p>
+            <div class="member-social">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-image">
+            <img src="image/chef2.png" alt="Chef 2" />
+          </div>
+          <div class="member-info">
+            <h3>Chef Marie</h3>
+            <p>Chef pâtissière</p>
+            <div class="member-social">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-image">
+            <img src="image/chef3.jpg" alt="Chef 3" />
+          </div>
+          <div class="member-info">
+            <h3>Chef Jean</h3>
+            <p>Chef de partie</p>
+            <div class="member-social">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-image">
+            <img src="image/chef4.jpg" alt="Chef 4" />
+          </div>
+          <div class="member-info">
+            <h3>Chef Sophie</h3>
+            <p>Sous-chef</p>
+            <div class="member-social">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panier modal -->
+    <div id="cartModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Votre panier</h3>
+          <button class="close-modal"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+          <div id="cartItems" class="cart-items">
+            <!-- Les articles du panier seront ajoutés ici -->
+          </div>
+          <div class="cart-total">
+            <span>Total:</span>
+            <span id="cartTotal">$0.00</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-secondary" id="clearCart">Vider le panier</button>
+          <button class="btn-primary" id="checkoutBtn">
+            Passer à la caisse
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de confirmation -->
+    <div id="confirmationModal" class="modal">
+      <div class="modal-content confirmation-content">
+        <div class="success-icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h3>Commande confirmée !</h3>
+        <p id="confirmationMessage">
+          Votre commande a été enregistrée avec succès.
+        </p>
+        <p id="paymentMethod"></p>
+        <button class="btn-primary" id="closeConfirmation">Fermer</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Adresse</h3>
+          <p>
+            <i class="fa-solid fa-location-dot"></i> 123 Rue de la Gastronomie
+          </p>
+          <p>228 Lomé, Togo</p>
+          <p><i class="fa-solid fa-phone"></i> +228 97 85 97 76</p>
+          <p><i class="fa-solid fa-envelope"></i> contact@gourmetdelight.fr</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Horaires</h3>
+          <p>Lundi - Vendredi: 11h - 22h</p>
+          <p>Samedi: 12h - 23h</p>
+          <p>Dimanche: Fermé</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Liens rapides</h3>
+          <p><a href="#Home">Accueil</a></p>
+          <p><a href="#About">À propos</a></p>
+          <p><a href="#Menu">Menu</a></p>
+          <p><a href="#Order">Commande</a></p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Suivez-nous</h3>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-map">
+        <h3>Notre emplacement</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.292292615509614!3d48.85837007928746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1620123456789!5m2!1sfr!2sfr"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Gourmet Delight. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
